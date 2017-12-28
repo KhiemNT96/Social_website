@@ -13,10 +13,27 @@
         </div>
     </div>
     <div class="col-sm-6">
+      <%= render '/components/post_form' %><br><br>
     <% for @p in @posts %>
-        <div class="card">
-          <div class="card-body">
-            <p><%= @p.content %></p>
+        <div class="card post-panel">
+          <div class="card-body row">
+            <div class="col-sm-1">
+              <img src="/aa.jpg" class="rounded-img" height="50px" width="50px" name="imageuser"></img>
+            </div>
+            <div class="col-sm-11">
+              <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+              <p class="post-content"><%= @p.content %></p>
+            </div>
+
+          <div class="col-sm-12">
+              <p class="post-links">
+                <span class="fa fa-share-alt-square" aria-hidden="true" name="share"></span>
+                <span class="fa fa-toggle-down" aria-hidden="true" name="down"></span>
+                <span class="fa fa-toggle-up" aria-hidden="true" name="up"></span>
+                <a href="">View conversation</a>
+                <span class=" fa fa-comments-o" aria-hidden="true" name="comment"></span>
+              </p>
+            </div>
           </div>
         </div>
     <% end %>

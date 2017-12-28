@@ -1,2 +1,65 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
+
+
+body {
+    background-color: rgba(234,247,241,0.45);
+}
+input[name=search] {
+    background-color: rgba(25,25,112,0.45);
+    color: white;
+}
+form[name=formsearchuser] {
+    position: absolute;
+    left: 50%;
+}
+
+ul[name=buttonuser]{
+    position: absolute;
+    left: 70%;
+}
+
+.navbar-brand>img {
+  height: 70px;
+  width: 70px;
+  float: left;
+}
+img[name=imageuser] {
+border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+}
+.post-panel {
+    margin-top: 10px;
+}
+.post-title {
+    text-align: left;
+    margin-left: 15px;
+}
+.post-content {
+    text-align: left;
+    margin-left: 15px;
+}
+.post-links {
+    text-align: left;
+}
+.post-owner {
+    color: black;
+    font-weight: bold;
+}
+.post-creation {
+    opacity: 0.7;
+}
+.g-links {
+    opacity: 0.4;
+    font-size: 120%;
+    margin-right: 75px;
+}
+.post-form-panel {
+    margin-bottom: -21px;
+}
+span[name=comment]{
+     padding-left: 30%;
+}

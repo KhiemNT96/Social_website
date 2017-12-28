@@ -1,6 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/home">Flutter</a>
+   <div class="container-fluid container">
+    <a href="#" class="navbar-brand"><img src="/11.jpg"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,35 +12,44 @@
           <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">ALL PAGES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">SHORTCODES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">ALL ELEMENTS</a>
         </li>
-      </ul>
-      <ul class="navbar-nav mr-auto navbar-right">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info my-2 my-md-0" type="submit">Search</button>
+      <form class="form-inline" name="formsearchuser">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for anything" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
       </form>
+      </ul> 
+       
+      <ul class="navbar-nav mr-auto navbar-right" name="buttonuser">
+
       <li class="nav-item">
-          <a class="nav-link" href="#">Tweet</a>
+            <button type="button" class="btn btn-warning">+ ADD POST</button>
         </li>
-         <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= current_user.username%>
+          <img src="/aa.jpg" height="35px" width="35px" name="imageuser">
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="/user/<%= current_user.username%>">Profile</a>
           <a class="dropdown-item" href="#">Help</a>
-          <a class="dropdown-item"><%= link_to 'Settings', edit_user_registration_path %></a>
+          <a ><%= link_to 'Settings', edit_user_registration_path ,class: "dropdown-item"%></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item"><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></a>
+          <a ><%= link_to 'Log Out', destroy_user_session_path ,class: "dropdown-item", :method => :delete %></a>
         </div>
       </li>
     </ul>
     </div>
+  </div>
   </nav>
